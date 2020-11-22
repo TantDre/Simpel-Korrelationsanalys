@@ -1,4 +1,4 @@
-# ---------- Import (Rör ej här) ----------
+# ---------- Import ----------
 import numpy as np
 
 # ---------- Korrelationsfunction ----------
@@ -8,6 +8,7 @@ def korrelationsfunction(x, y):
   y = np.array(y)
   assert(len(x)==len(y))
 
+  print("\nStatistik:")
   # Antal värden
   n = len(x)
   print("n = " + str(n))
