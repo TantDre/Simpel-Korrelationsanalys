@@ -8,24 +8,24 @@ def korrelationsfunction(x, y):
   y = np.array(y)
   assert(len(x)==len(y))
 
-  print("\nStatistik:")
+  print("\n------ Statistik ------")
   # Antal värden
   n = len(x)
-  print("n = " + str(n))
+  print("Antal n = " + str(n))
 
   # Medelvärden
   x_bar = np.mean(x)
-  print("μx = " + str(x_bar))
+  print("Medelvärde x = " + str(x_bar))
 
   y_bar = np.mean(y)
-  print("μy = " + str(y_bar))
+  print("Medelvärde y = " + str(y_bar))
 
   # Standardavikelser
   x_std = np.std(x)
-  print("σx = " + str(x_std))
+  print("Standardavvikelse x = " + str(x_std))
 
   y_std = np.std(y)
-  print("σy = " + str(y_std) + "\n")
+  print("Standardavvikelse y = " + str(y_std) + "\n")
 
   # Summor
   x_sum = sum(x)
@@ -41,9 +41,10 @@ def korrelationsfunction(x, y):
   print("Σ(x^2) = " + str(x2_sum))
 
   y2_sum = y.dot(y.T)
-  print("Σ(y^2) = " + str(xy_sum) + "\n")
+  print("Σ(y^2) = " + str(xy_sum))
 
   # Korrelation
+  print("\n------ Korrelation ------")
   r = (n * xy_sum - x_sum * y_sum) / np.sqrt((n * x2_sum - x_sum**2)*(n * y2_sum - y_sum**2))
   print("r = " + str(r))
 

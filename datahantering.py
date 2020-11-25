@@ -1,6 +1,7 @@
 # ---------- Läs in data ----------
 def datahantering():
 
+  print("\n------ Data ------")
   # Antal element
   n = int(input("Antal värden (n):")) 
 
