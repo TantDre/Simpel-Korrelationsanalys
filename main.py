@@ -61,5 +61,8 @@ try:
     # ---------- Oberoende t-test ----------
     OtTest(x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2)
 
+  else:
+    print("\nNågot gick fel vänligen tryck på 'Run' och starta om!")
+
 except:
-  print("Något gick fel vänligen tyrck på Run och börja om!")
+  print("\nNågot gick fel vänligen tryck på 'Run' och starta om!")
