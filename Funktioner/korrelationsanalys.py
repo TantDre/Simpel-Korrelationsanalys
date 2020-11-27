@@ -1,8 +1,8 @@
 # ---------- Import ----------
 import numpy as np
 
-# ---------- Korrelationsfunction ----------
-def korrelationsfunction(x, y):
+# ---------- Korrelationsfunktion ----------
+def korrelationsfunktion(x, y):
   # Gör om till np matris
   x = np.array(x)
   y = np.array(y)
