@@ -1,5 +1,5 @@
 # Simpel-Korrelationsanalys
-Simpel korrelationsanalys av tvådimensionell data.
+Simpel korrelationsanalys av tvådimensionell data.  
 Programmet startas genom att köra main.py  
 Programmet har följande funktioner:  
 - Räkna ut korrelationskoefficient  
