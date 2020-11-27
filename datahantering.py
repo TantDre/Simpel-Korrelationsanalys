@@ -1,5 +1,5 @@
 # ---------- Läs in data för K ----------
-def datahanteringK():
+def dataK():
   print("\n------ Data ------")
   # Antal element
   n = int(input("Antal värden (n):")) 
@@ -21,7 +21,25 @@ def datahanteringK():
   return(x, y)
 
 # ---------- Läs in data för T ----------
-def datahanteringT():
+def dataT():
+  print("\n------ Data ------")
+  print("Stickprovsmedelvärde x: ")
+  x_bar = float(input())
+
+  print("\nPopulationsmedelvärde μ: ")
+  mu = float(input())
+
+  print("\nAntal värden n: ")
+  n = float(input())
+
+  print("\nStandardavvikelse s: ")
+  s = float(input())
+
+
+  return(x_bar, mu, n, s)
+  
+# ---------- Läs in data för OT ----------
+def dataOT():
   print("\n------ Data ------")
   print("Stickprovsmedelvärde x1: ")
   x1_bar = float(input())

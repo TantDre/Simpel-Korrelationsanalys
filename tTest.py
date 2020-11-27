@@ -1,8 +1,20 @@
 # ---------- Import ----------
 import numpy as np
 
-# ---------- Korrelationsfunction ----------
-def tTest(x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2):
+# ---------- t-test ----------
+def tTest(x_bar, mu, n, s):
+
+  print("\n------ t-test ------")
+  # DoF
+  df = n - 1
+  print("df = " + str(df))
+
+  # T-värde
+  tdf = (x_bar - mu) / (s / np.sqrt(n))
+  print("tdf = " + str(tdf))
+
+# ---------- Oberoende t-test ----------
+def OtTest(x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2):
 
   print("\n------ Oberoende t-test ------")
   # DoF

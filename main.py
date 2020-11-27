@@ -1,12 +1,12 @@
 # ---------- Import ----------
-from datahantering import datahanteringK, datahanteringT
+from datahantering import dataK, dataT, dataOT
 from korrelationsanalys import korrelationsfunction
-from tTest import tTest
+from tTest import tTest, OtTest
 
 
 # ---------- Meny ----------
 print("------------ Meny ------------")
-print("Korrelationskoefficient: (1) \nOberoende t-test:\t\t (2)")
+print("Korrelationskoefficient: (1) \nt-test:\t\t\t\t\t (2) \nOberoende t-test:\t\t (3)")
 val = input()
 
 if val == "1":
@@ -18,7 +18,7 @@ if val == "1":
   print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
 
   # ---------- Läs in data ----------
-  x, y = datahanteringK()
+  x, y = dataK()
 
   # ---------- Korrelation ----------
   korrelationsfunction(x, y)
@@ -26,12 +26,24 @@ if val == "1":
 elif val == "2":
   # ---------- Info ----------
   print("\n------ Info ------")
+  print("Räknar ut t-värde och frihetsgrad med t-test.")
+  print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
+
+  # ---------- Läs in data ----------
+  x_bar, mu, n, s = dataT()
+
+  # ---------- Oberoende t-test ----------
+  tTest(x_bar, mu, n, s)
+
+elif val == "3":
+  # ---------- Info ----------
+  print("\n------ Info ------")
   print("Räknar ut t-värde och frihetsgrad med oberoende t-test.")
   print("För att testa μ1 = μ2 sätt båda till 0.")
   print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
 
   # ---------- Läs in data ----------
-  x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2 = datahanteringT()
+  x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2 = dataOT()
 
-  # ---------- Korrelation ----------
-  tTest(x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2)
+  # ---------- Oberoende t-test ----------
+  OtTest(x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2)
