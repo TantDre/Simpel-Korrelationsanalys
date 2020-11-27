@@ -63,7 +63,15 @@ def menyB(val):
       OtTest(x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2)
 
     else:
-      print("\nNågot gick fel, vänligen tryck på 'Run' och starta om!")
+      # Töm konsolen
+      os.system('clear')
+
+      # Error
+      print("Något gick fel, vänligen tryck på 'Run' och starta om!")
 
   except:
-    print("\nNågot gick fel, vänligen tryck på 'Run' och starta om!")
+    # Töm konsolen
+    os.system('clear')
+
+    # Error
+    print("Något gick fel, vänligen tryck på 'Run' och starta om!")
