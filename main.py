@@ -1,12 +1,12 @@
 # ---------- Import ----------
-from datahantering import dataK, dataT, dataOT
+from datahantering import dataZ, dataK, dataT, dataOT
 from korrelationsanalys import korrelationsfunction
-from tTest import tTest, OtTest
+from tTest import zTest, tTest, OtTest
 
 
 # ---------- Meny ----------
 print("------------ Meny ------------")
-print("Korrelationskoefficient: (1) \nt-test:\t\t\t\t\t (2) \nOberoende t-test:\t\t (3)")
+print("Korrelationskoefficient: (1) \nz-test:\t\t\t\t\t (2) \nt-test:\t\t\t\t\t (3) \nOberoende t-test:\t\t (4)")
 val = input()
 
 if val == "1":
@@ -26,16 +26,28 @@ if val == "1":
 elif val == "2":
   # ---------- Info ----------
   print("\n------ Info ------")
+  print("Räknar ut z-värde  med z-test.")
+  print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
+
+  # ---------- Läs in data ----------
+  x_bar, mu, n, s = dataZ()
+
+  # ---------- z-test ----------
+  zTest(x_bar, mu, n, s)
+
+elif val == "3":
+  # ---------- Info ----------
+  print("\n------ Info ------")
   print("Räknar ut t-värde och frihetsgrad med t-test.")
   print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
 
   # ---------- Läs in data ----------
   x_bar, mu, n, s = dataT()
 
-  # ---------- Oberoende t-test ----------
+  # ---------- t-test ----------
   tTest(x_bar, mu, n, s)
 
-elif val == "3":
+elif val == "4":
   # ---------- Info ----------
   print("\n------ Info ------")
   print("Räknar ut t-värde och frihetsgrad med oberoende t-test.")

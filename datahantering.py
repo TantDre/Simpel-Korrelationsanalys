@@ -20,6 +20,23 @@ def dataK():
 
   return(x, y)
 
+# ---------- Läs in data för z ----------
+def dataZ():
+  print("\n------ Data ------")
+  print("Stickprovsmedelvärde x: ")
+  x_bar = float(input())
+
+  print("\nPopulationsmedelvärde μ: ")
+  mu = float(input())
+
+  print("\nAntal värden n: ")
+  n = float(input())
+
+  print("\nPopulationsstandardavvikelse σ: ")
+  s = float(input())
+
+  return(x_bar, mu, n, s)
+
 # ---------- Läs in data för T ----------
 def dataT():
   print("\n------ Data ------")
@@ -34,7 +51,6 @@ def dataT():
 
   print("\nStandardavvikelse s: ")
   s = float(input())
-
 
   return(x_bar, mu, n, s)
   

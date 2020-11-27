@@ -1,6 +1,14 @@
 # ---------- Import ----------
 import numpy as np
 
+# ---------- z-test ----------
+def zTest(x_bar, mu, n, s):
+
+  print("\n------ z-test ------")
+  # z-värde
+  z = (x_bar - mu) / (s / np.sqrt(n))
+  print("z = " + str(z))
+
 # ---------- t-test ----------
 def tTest(x_bar, mu, n, s):
 
