@@ -1,7 +1,7 @@
 # ---------- Import ----------
-from Funktioner.datahantering import dataZ, dataK, dataT, dataOT
+from Funktioner.datahantering import dataZ, dataK, dataT, dataOT, dataBT, dataD
 from Funktioner.korrelationsanalys import korrelationsfunktion
-from Funktioner.tTest import zTest, tTest, OtTest
+from Funktioner.tTest import zTest, tTest, OtTest, BtTest, CohensD
 import sys, os
 
 # ---------- Meny funktion ----------
@@ -61,6 +61,30 @@ def menyB(val):
 
       # ---------- Oberoende t-test ----------
       OtTest(x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2)
+
+    elif val == "5":
+      # ---------- Info ----------
+      print("------ Beroende (parat) t-test ------")
+      print("Räknar ut t-värde och frihetsgrad med beroende t-test.")
+      print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
+
+      # ---------- Läs in data ----------
+      d_bar, muD, n, sd = dataBT()
+
+      # ---------- Beroende t-test ----------
+      BtTest(d_bar, muD, n, sd)
+
+    elif val == "6":
+      # ---------- Info ----------
+      print("------ Effektstyrka ------")
+      print("Räknar ut effektstyrka med beroende Cohens d.")
+      print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
+
+      # ---------- Läs in data ----------
+      x1_bar, x2_bar, sd = dataD()
+
+      # ---------- Cohens d ----------
+      CohensD(x1_bar, x2_bar, sd)
 
     else:
       # Töm konsolen

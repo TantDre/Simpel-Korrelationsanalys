@@ -82,3 +82,34 @@ def dataOT():
   s2 = float(input())
 
   return(x1_bar, x2_bar, mu1, mu2, n1, n2, s1, s2)
+
+# ---------- Läs in data för BT ----------
+def dataBT():
+  print("\n------ Data ------")
+  print("Stickprovsmedeldifferensen d: ")
+  d_bar = float(input())
+
+  print("\nPopulationsmedelvärde μD: ")
+  muD = float(input())
+
+  print("\nAntal värden n: ")
+  n = float(input())
+
+  print("\nStandardavvikelse sd: ")
+  sd = float(input())
+
+  return(d_bar, muD, n, sd)
+
+  # ---------- Läs in data för Cohens ----------
+def dataD():
+  print("\n------ Data ------")
+  print("\nStickprovsmedelvärde x1: ")
+  x1_bar = float(input())
+
+  print("\nStickprovsmedelvärde x2: ")
+  x2_bar = float(input())
+
+  print("\nStandardavvikelse sx: ")
+  sx = float(input())
+
+  return(x1_bar, x2_bar, sx)
