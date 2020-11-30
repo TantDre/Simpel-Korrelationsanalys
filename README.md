@@ -6,3 +6,5 @@ Programmet har följande funktioner:
 - z-test  
 - t-test  
 - Oberoende t-test  
+- Beroende t-test
+- Effektstyrka
