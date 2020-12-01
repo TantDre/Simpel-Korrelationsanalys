@@ -8,7 +8,10 @@ import sys, os
 def menyB(val):
 
   # Töm konsolen
-  os.system('clear')
+  try:
+    os.system('clear')
+  except:
+    print(" \n ")		
 
   try:
     if val == "1":
