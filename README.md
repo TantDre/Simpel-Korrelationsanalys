@@ -8,3 +8,4 @@ Programmet har följande funktioner:
 - Oberoende t-test  
 - Beroende t-test
 - Effektstyrka
+- Chi-Två
