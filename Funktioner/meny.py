@@ -1,7 +1,8 @@
 # ---------- Import ----------
-from Funktioner.datahantering import dataZ, dataK, dataT, dataOT, dataBT, dataD
+from Funktioner.datahantering import dataZ, dataK, dataT, dataOT, dataBT, dataD, dataChi
 from Funktioner.korrelationsanalys import korrelationsfunktion
 from Funktioner.tTest import zTest, tTest, OtTest, BtTest, CohensD
+from Funktioner.chi2 import chi2
 import sys, os
 
 # ---------- Meny funktion ----------
@@ -88,6 +89,18 @@ def menyB(val):
 
       # ---------- Cohens d ----------
       CohensD(x1_bar, x2_bar, sd)
+    
+    elif val == "7":
+      # ---------- Info ----------
+      print("------ Chi-två ------")
+      print("Räknar ut chi-två och frihetsgrad för en variabel.")
+      print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
+
+      # ---------- Läs in data ----------
+      o, e = dataChi()
+
+      # ---------- Chi2 ----------
+      chi2(o, e)
 
     else:
       # Töm konsolen
