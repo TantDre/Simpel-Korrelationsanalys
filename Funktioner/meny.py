@@ -1,5 +1,5 @@
 # ---------- Import ----------
-from Funktioner.datahantering import dataZ, dataK, dataT, dataOT, dataBT, dataD, dataChi
+from Funktioner.datahantering import dataZ, dataK, dataT, dataOT, dataBT, dataD
 from Funktioner.korrelationsanalys import korrelationsfunktion
 from Funktioner.tTest import zTest, tTest, OtTest, BtTest, CohensD
 from Funktioner.chi2 import chi2
@@ -96,11 +96,8 @@ def menyB(val):
       print("Räknar ut chi-två och frihetsgrad för en variabel.")
       print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
 
-      # ---------- Läs in data ----------
-      o, e = dataChi()
-
       # ---------- Chi2 ----------
-      chi2(o, e)
+      chi2()
 
     else:
       # Töm konsolen
@@ -111,7 +108,7 @@ def menyB(val):
 
   except:
     # Töm konsolen
-    os.system('clear')
+  #  os.system('clear')
 
     # Error
     print("Något gick fel, vänligen tryck på 'Run' och starta om!")

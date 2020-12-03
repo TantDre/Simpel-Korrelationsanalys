@@ -113,25 +113,3 @@ def dataD():
   sx = float(input())
 
   return(x1_bar, x2_bar, sx)
-
-# ---------- Läs in data för Chi-2 ----------
-def dataChi():
-  print("\n------ Data ------")
-  # Antal element
-  k = int(input("Antal värden k: ")) 
-
-  # o värden
-  print("\nAnge alla observerade värde o:")
-  o = []
-  for i in range(0, k): 
-      element = float(input()) 
-      o.append(element) 
-
-  # e värden
-  print("\nAnge alla förväntade värden e:")
-  e = []
-  for i in range(0, k): 
-      element = float(input())
-      e.append(element)       
-
-  return(o, e)
