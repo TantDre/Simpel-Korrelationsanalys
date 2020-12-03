@@ -93,7 +93,7 @@ def menyB(val):
     elif val == "7":
       # ---------- Info ----------
       print("------ Chi-två ------")
-      print("Räknar ut chi-två och frihetsgrad för flera variabel.")
+      print("Räknar ut chi-två och frihetsgrad för flera variabler.")
       print("\nTänk på att anväda punkt för decimaltal och inte kommatecken t.ex. (5.2 inte 5,2).")
 
       # ---------- Chi2 ----------
